@@ -1,0 +1,183 @@
+:root {
+  --background-color-light: #f4f4f9;
+  --background-color-dark: #333;
+  --text-color-light: #333;
+  --text-color-dark: #f4f4f9;
+  --input-background-light: #fff;
+  --input-background-dark: #555;
+  --button-background-light: #5cb85c;
+  --button-background-dark: #444;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: background-color 0.3s;
+}
+
+#root {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+}
+
+.app {
+  background-color: var(--input-background);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  color: var(--text-color);
+  margin-bottom: 20px;
+  transition: color 0.3s;
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.input-container input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-right: 10px;
+  font-size: 16px;
+  background-color: var(--input-background);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.input-container button {
+  padding: 10px 20px;
+  background-color: var(--button-background-light);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.input-container button:hover {
+  background-color: #4cae4c;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.task-list li.completed .task-input {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.task-input {
+  flex: 1;
+  padding: 5px;
+  border: none;
+  font-size: 16px;
+  background: none;
+  outline: none;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+.task-list button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.task-list button:first-of-type {
+  background-color: #5bc0de;
+  color: white;
+}
+
+.task-list button:first-of-type:hover {
+  background-color: #31b0d5;
+}
+
+.task-list button:last-of-type {
+  background-color: #d9534f;
+  color: white;
+}
+
+.task-list button:last-of-type:hover {
+  background-color: #c9302c;
+}
+
+.clear-all {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #f0ad4e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.clear-all:hover {
+  background-color: #ec971f;
+}
+
+.theme-toggle {
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.theme-toggle:hover {
+  background-color: #666;
+}
+
+/* Dark mode styles */
+.app.dark {
+  --background-color: var(--background-color-dark);
+  --text-color: var(--text-color-dark);
+  --input-background: var(--input-background-dark);
+  --button-background-light: var(--button-background-dark);
+}
+
+.app.light {
+  --background-color: var(--background-color-light);
+  --text-color: var(--text-color-light);
+  --input-background: var(--input-background-light);
+  --button-background-light: #5cb85c;
+}
